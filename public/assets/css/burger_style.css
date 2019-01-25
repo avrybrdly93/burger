@@ -1,0 +1,17 @@
+.main-content {
+    margin:auto;
+    width: 50%;
+}
+
+.side-content {
+    margin:auto;
+    width: 40%;
+}
+
+.burgerz-input {
+    width: 300px;
+}
+
+.devoured-burgers {
+    float:right;
+}
