@@ -6,9 +6,16 @@ let burger = {
             callBack(res);
         });
     },
-    // insertOne: function(callBack) {
-    //     orm.insertOne("burgers", )
-    // }
+    insertOne: function(cols, vals, callBack) {
+        orm.insertOne("burgers", cols, vals, function(req, res) {
+            callBack(res);
+        });
+    },
+    updateOne: function(updatedItem, condition, callBack) {
+        orm.updateOne("burgers", updatedItem, condition, (req, res) => {
+            callBack(res);
+        })
+    }
 }
 
 module.exports = burger;

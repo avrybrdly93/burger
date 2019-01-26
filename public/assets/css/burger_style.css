@@ -1,17 +1,33 @@
-.main-content {
-    margin:auto;
-    width: 50%;
-}
-
-.side-content {
-    margin:auto;
-    width: 40%;
+h1 {
+    text-align: center;
+    margin-top: 24px;
 }
 
 .burgerz-input {
-    width: 300px;
+    width: 350px;
 }
 
-.devoured-burgers {
-    float:right;
+img {
+    width: 350px;
 }
+
+li {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 18px;
+    position:relative;
+}
+
+.devour {
+    position: absolute;
+    top:0;
+    right:0;
+    height: 47px;
+}
+
+* {
+    border-radius: 0 !important;
+  }

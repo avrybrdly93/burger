@@ -1,16 +1,44 @@
-<div class="jumbotron main-content">
-    <div class="added-burgers"></div>
-    <div class="side-content">
-        <h1 class="header"> Eat-Da-Burger! </h1>
-
-        <div class="input-group-lg burgerz-input">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Add a burger</span>
+<h1>Eat-Da-Burger!</h1>
+<hr>
+<div class="row">
+    <div class="col s4">
+        <div class="side-content">
+            <img src="/assets/img/Super_Nasty_Patty.jpg">
+            <div class="input-group-lg burgerz-input">
+                {{!-- <div class="input-group-prepend">
+                </div> --}}
+                <h2>Add a burger!</h2>
+                <input class="form-control burger-input"></input>
             </div>
-            <textarea class="form-control burger-input" aria-label="With textarea"></textarea>
+            <br>
+            <button class="burger-button btn waves-effect waves-light btn-large">Submit</button>
         </div>
-        <br>
-        <button class="burger-button btn-lg btn-success" type="submit">Submit</button>
     </div>
-    <div class="devoured-burgers">overhere</div>
+    <div class="col s4">
+        <div class="added-burgers">
+            <ol>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+            </ol>
+        </div>
+    </div>
+    <div class="col s4">
+        <div class="devoured-burgers">
+            <ol>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                    {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
 </div>
+
+
+
+    
+    
